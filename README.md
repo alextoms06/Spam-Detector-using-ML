@@ -1,7 +1,73 @@
 # Spam-Detector-using-ML
 CHROME EXTENSION BRNACH- YOU'LL NEED ALL OF THIS
+How I Built This Project (Step by Step)
 
-Files in the Chrome Extension + ML project
+Trained Model in Colab
+
+Loaded the spam dataset (spam.csv).
+
+Preprocessed text and labels.
+
+Used TfidfVectorizer and LogisticRegression.
+
+Trained the model, tested accuracy.
+
+Saved & Exported Model
+
+Saved model as spam_model.pkl.
+
+Saved vectorizer as vectorizer.pkl.
+
+Exported model.json and vocab.json for use in the extension.
+
+Created Chrome Extension Files
+
+manifest.json → metadata for Chrome (permissions, popup file).
+
+popup.html → user interface (text input and result).
+
+popup.js → loads exported model & vocabulary, handles input, shows prediction.
+
+icon.png → extension toolbar icon.
+
+Tested Extension Locally
+
+Opened chrome://extensions/ in Chrome.
+
+Enabled Developer mode.
+
+Clicked Load unpacked and selected the AI_extension folder.
+
+Typed test messages in the popup and checked predictions.
+
+Optional: Retraining
+
+Used retrain.py in Python to update spam_model.pkl and vectorizer.pkl.
+
+Exported again to model.json and vocab.json for the extension.
+
+
+
+
+How it Works
+
+Text entered in the popup is vectorized using vocab.json.
+
+The exported model (model.json) predicts spam probability.
+
+Result is displayed immediately in the popup.
+
+Notes
+
+Make sure the model and vocab files match the version of the extension.
+
+The extension runs locally in Chrome; it does not require a server.
+
+
+
+
+
+*Files in the Chrome Extension + ML project*
 
 icon.png
 
